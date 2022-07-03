@@ -12,7 +12,14 @@ driver.find_element_by_name("email").send_keys("abc@gmail.com")
 
 driver.find_element_by_id("exampleInputPassword1").send_keys("1234")
 
-driver.find_element_by_id("exampleCheck1").click()
+checkbox = driver.find_element_by_id("exampleCheck1")
+checkbox.click()
+
+if not checkbox.is_selected():
+    print("The checkbox is not selected")
+    assert False
+
+print("The checkbox is selected")
 
 driver.find_element_by_xpath("//input[@type='submit']").click()
 
