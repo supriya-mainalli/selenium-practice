@@ -7,6 +7,7 @@ driver.get("https://www.rahulshettyacademy.com/AutomationPractice/")
 
 driver.find_element(By.ID, "name").send_keys("supriya")
 
+
 driver.find_element(By.ID, "alertbtn").click()
 
 alert = driver.switch_to.alert
