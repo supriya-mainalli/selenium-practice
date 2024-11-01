@@ -1,7 +1,9 @@
 from datetime import time
 
+
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.select import Select
 
 # driver = webdriver.Chrome(executable_path="D:\\chromedriver_win32\\chromedriver.exe")
 driver = webdriver.Chrome()
@@ -13,6 +15,14 @@ driver.maximize_window()
 driver.find_element(By.NAME, 'name').send_keys('supriya')
 
 driver.find_element(By.NAME, 'email').send_keys('abc@gmail.com')
+
+# Static dropdown
+# select_by_index()
+# select_by_value() if any value attribute present
+# select_by_visible_text()
+dropdown = Select(driver.find_element(By.ID, 'exampleFormControlSelect1'))
+dropdown.select_by_index(0)
+dropdown.select_by_visible_text('Female')
 
 # CSS selector syntax -> tagname[attribute=value'], #id, .class-name
 driver.find_element(By.CSS_SELECTOR, "input[id='exampleInputPassword1']").send_keys('1234')
