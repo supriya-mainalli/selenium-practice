@@ -1,6 +1,4 @@
-from datetime import time
-
-
+import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
@@ -45,6 +43,8 @@ driver.find_element(By.XPATH, "//input[@type='submit']").click()
 # CSS syntax - tagname[attribute='value']
 message = driver.find_element(By.CLASS_NAME, 'alert-success').text
 assert 'Success' in message
+
+time.sleep(2)
 
 driver.find_element(By.XPATH, "//input[@class='ng-untouched ng-pristine ng-valid']").send_keys("helloagain")
 driver.close()
