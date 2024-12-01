@@ -27,6 +27,7 @@ driver.find_element(By.CSS_SELECTOR, "input[id='exampleInputPassword1']").send_k
 
 checkbox = driver.find_element(By.ID, 'exampleCheck1')
 checkbox.click()
+assert checkbox.is_selected()
 
 # css selector #id
 driver.find_element(By.CSS_SELECTOR, '#inlineRadio1').click()
