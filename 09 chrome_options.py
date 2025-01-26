@@ -1,11 +1,10 @@
 from selenium import webdriver
-from selenium.webdriver.ie.webdriver import WebDriver
 
 chrome_options = webdriver.ChromeOptions()
-chrome_options.add_argument('headless')
-chrome_options.add_argument('--ignore-certificate-errors')
+chrome_options.add_argument("headless")
+chrome_options.add_argument("--ignore-certificate-errors")
 
 driver = webdriver.Chrome(options=chrome_options)
 driver.get("https://rahulshettyacademy.com/AutomationPractice/")
-driver.get_screenshot_as_file('scree.png')
+driver.get_screenshot_as_file("scree.png")
 driver.close()
